@@ -55,9 +55,11 @@ export class FileController {
         try {
             const file: FileDto = req?.file
             const id: string = req.params.id
-            await this.fileService.changeFile(id, file)
+            const changedFile = await this.fileService.changeFile(id, file)
+            res.json(changedFile)
+            
         } catch (error) {
-
+            throw new Error('Error')
         }
     }
 

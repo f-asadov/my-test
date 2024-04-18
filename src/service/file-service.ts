@@ -121,6 +121,7 @@ export class FileService {
 
             
             await this.fileRepository.update(id,finalFile)
+            return finalFile
         }
 
 
