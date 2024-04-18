@@ -9,7 +9,6 @@
 ```shell
 git clone <repository>
 npm install
-fill in env
 docker compose up -d
 npm run dev
 ```
